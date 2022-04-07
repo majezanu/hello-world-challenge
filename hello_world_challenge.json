@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "92cc4e32-096d-48c5-bc87-948fcb79fcb4",
+		"name": "Hello World Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pokemon Random",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_value\": 100,\n    \"last_value\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/pokemon/random/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pokemon",
+						"random",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/pokemon/name/:name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"pokemon",
+						"name",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "ditto"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello world with name in path",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hello-world/greeting/:name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hello-world",
+						"greeting",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "Zavala"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello world without name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hello-world/greeting/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hello-world",
+						"greeting",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hello world with name in body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Zavala\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/hello-world/greeting/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hello-world",
+						"greeting",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
